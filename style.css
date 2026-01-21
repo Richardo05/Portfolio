@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary-color: #EEEEEE;
+    --secondary-color: #929AAB;
+    --background-color: #F7F7F7;
+    --text-color: #393E46;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+section{
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    padding: 2rem 5%;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo{
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--background-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--background-color);
+    margin-left: 3rem;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+#menu-icon{
+    font-size: 2.5rem;
+    color: var(--background-color);
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20rem 5%;
+}
+
+.home-header{
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+
+.name{
+    color: #00BFFF;
+}
+
+.home-text{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    max-width: 80rem;
+}
+
+.social-links{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.socials{
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+.socials:hover{
+    transform: scale(1.1);
+    color: var(--secondary-color);
+}
+
+.projects{
+    padding: 60px 5%;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.section-title{
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    color: var(--text-color);
+}
+
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card{
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.project-image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-title{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-description{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.source-code{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.source-code:hover{
+    background-color: var(--text-color);
+    transform: scale(1.05);
+}
+
+.footer{
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 3rem 5%;
+}
+
+.footer-content h3{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content p{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.footer-content a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.footer-content a:hover{
+    text-decoration: underline;
+}
+
+.footer{
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 4rem 5% 2rem;
+    border-top: 2px solid var(--primary-color);
+    position: relative;
+}
+
+.footer-content{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h3{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.footer-content p{
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.footer-content .copyright{
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header{
+        padding: 1.5rem 5%;
+    }
+
+    .logo{
+        font-size: 2rem;
+    }
+
+    .navbar{
+        display: none; /* Hide navbar on mobile, assuming JS for toggle */
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .home{
+        padding: 15rem 5% 5rem;
+    }
+
+    .home-header{
+        font-size: 4rem;
+    }
+
+    .home-text{
+        font-size: 1.8rem;
+    }
+
+    .projects-container{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card{
+        padding: 1.5rem;
+    }
+
+    .project-title{
+        font-size: 2rem;
+    }
+
+    .project-description{
+        font-size: 1.4rem;
+    }
+
+    .section-title{
+        font-size: 3rem;
+    }
+
+    .footer{
+        padding: 3rem 5% 1.5rem;
+    }
+
+    .footer-content h3{
+        font-size: 2.5rem;
+    }
+
+    .footer-content p{
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-header{
+        font-size: 3rem;
+    }
+
+    .home-text{
+        font-size: 1.6rem;
+    }
+
+    .section-title{
+        font-size: 2.5rem;
+    }
+
+    .project-title{
+        font-size: 1.8rem;
+    }
+
+    .project-description{
+        font-size: 1.3rem;
+    }
+
+    .footer-content h3{
+        font-size: 2rem;
+    }
+
+    .footer-content p{
+        font-size: 1.4rem;
+    }
+}
+
+/* Mobile Menu */
+.navbar.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active a{
+    margin: 0.5rem 0;
+    padding: 0 5%;
+}
